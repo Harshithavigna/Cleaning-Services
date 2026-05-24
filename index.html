@@ -69,6 +69,21 @@
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-call-mobile {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    background: var(--pink);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .nav-call-mobile:hover { background: var(--pink-hover); }
 
   /* MOBILE MENU */
   .mobile-menu {
@@ -275,6 +290,7 @@
     .nav-cta { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
+    .nav-call-mobile { display: flex; }
     .steps { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .hero { padding: 60px 5% 50px; }
@@ -303,6 +319,8 @@
       
     </div>
   </a>
+  <a href="tel:+918886122287" class="nav-call-mobile">📞 8886122287</a>
+
   <ul class="nav-links">
     <li><a href="Services/services.html">Services</a></li>
     <li><a href="About/About.html">About</a></li>

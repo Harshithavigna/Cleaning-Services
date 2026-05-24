@@ -461,7 +461,7 @@
       <div class="quick-icon blue">✉️</div>
       <div>
         <div class="quick-label">Email Us</div>
-        <div class="quick-value">kakcleaningservices@gmail.com</div>
+        <div class="quick-value">myattitudekak@gmail.com</div>
       </div>
     </a>
   </div>
@@ -622,16 +622,40 @@
   <p>Privacy Policy · Terms of Service</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+  emailjs.init("YJrEikyZln4YlV7Un"); // ← paste your public key here
+
   function handleSubmit() {
-    const phone = document.getElementById('phone').value.trim();
     const fname = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+
     if (!fname || !phone) {
       alert('Please fill in your name and phone number.');
       return;
     }
-    document.getElementById('contact-form').style.display = 'none';
-    document.getElementById('success-state').style.display = 'block';
+
+    const btn = document.querySelector('.btn-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    emailjs.send('service_tyzdjnb', 'template_ncyvokp', {
+      from_name: fname + ' ' + document.getElementById('lname').value.trim(),
+      phone:     phone,
+      email:     document.getElementById('email').value.trim(),
+      service:   document.getElementById('service').value,
+      address:   document.getElementById('address').value.trim(),
+      message:   document.getElementById('message').value.trim(),
+    })
+    .then(() => {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('success-state').style.display = 'block';
+    })
+    .catch(() => {
+      alert('Something went wrong. Please call us directly at +91 88861 22287.');
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+    });
   }
 </script>
 

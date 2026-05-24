@@ -35,16 +35,6 @@
   }
   .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
   .logo img { height: 46px; width: 46px; object-fit: contain; border-radius: 50%; }
-  .logo-kak {
-    font-family: 'Poppins', sans-serif; font-size: 40px; font-weight: 800;
-    line-height: 1; letter-spacing: 3px;
-    background: linear-gradient(135deg,#d81b60,#ad1457);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  .logo-services {
-    font-family: 'Great Vibes', cursive; font-size: 30px; color: #2d2d2d;
-    line-height: 1; margin-top: 4px; background: none !important;
-  }
   .nav-links { display: flex; gap: 30px; list-style: none; }
   .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--pink); }
@@ -69,7 +59,9 @@
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
- .nav-mobile-actions {
+
+  /* MOBILE NAV ACTIONS */
+  .nav-mobile-actions {
     display: none;
     align-items: center;
     gap: 8px;
@@ -87,26 +79,28 @@
     white-space: nowrap;
   }
   .call-btn {
-    background: var(--pink);
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(194,24,91,0.25);
+    background: transparent;
+    color: var(--pink);
+    border: 1.5px solid var(--pink);
+    box-shadow: none;
   }
-  .call-btn:hover { background: var(--pink-hover); transform: translateY(-1px); }
+  .call-btn:hover { background: var(--pink-light); transform: translateY(-1px); }
   .wa-btn {
-    background: var(--pink);
-    color: #fff;
+    background: transparent;
+    color: var(--pink);
+    border: 1.5px solid var(--pink);
     padding: 7px 12px;
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(194,24,91,0.25);
+    box-shadow: none;
   }
-  .wa-btn:hover { background: var(--pink-hover); transform: translateY(-1px); }
+  .wa-btn:hover { background: var(--pink-light); transform: translateY(-1px); }
   .nav-divider {
     color: #ccc;
     font-size: 18px;
     font-weight: 300;
     line-height: 1;
   }
-  
+
   /* MOBILE MENU */
   .mobile-menu {
     display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0;
@@ -271,6 +265,8 @@
     transition: background 0.2s, transform 0.15s; box-shadow: 0 2px 12px rgba(194,24,91,0.20);
   }
   .btn-book:hover { background: var(--pink-hover); transform: translateY(-1px); }
+  .btn-book:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+  #form-status { margin-top: 14px; font-size: 14px; font-weight: 500; min-height: 22px; }
 
   /* FOOTER */
   footer { background: #1a1a1a; color: rgba(255,255,255,0.45); padding: 56px 6% 28px; }
@@ -293,7 +289,7 @@
   .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; }
   .footer-bottom p { font-size: 12px; }
 
-  /* WHATSAPP */
+  /* WHATSAPP FLOAT */
   .whatsapp-float { position: fixed; bottom: 26px; right: 26px; z-index: 999; width: 54px; height: 54px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); text-decoration: none; font-size: 26px; transition: transform 0.2s; }
   .whatsapp-float:hover { transform: scale(1.1); }
 
@@ -337,10 +333,10 @@
 <nav>
   <a href="#" class="logo">
     <img src="Images/Logo.jpeg" alt="KAK Logo" />
-    <div class="logo-brand">
-      
-    </div>
+    <div class="logo-brand"></div>
   </a>
+
+  <!-- MOBILE ONLY: Call + WhatsApp -->
   <div class="nav-mobile-actions">
     <a href="tel:+918886122287" class="nav-icon-btn call-btn" aria-label="Call us">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -474,10 +470,10 @@
   <div class="section-title">Ready for a cleaner home?</div>
   <p class="section-sub">Fill in your details and we'll call you within 30 minutes to confirm your booking.</p>
   <div class="booking-form">
-    <input type="text" placeholder="Your Name" />
-    <input type="tel" placeholder="Phone Number" />
-    <select>
-      <option>Select Service</option>
+    <input type="text" id="fname"    placeholder="Your Name"    />
+    <input type="tel"  id="fphone"   placeholder="Phone Number" />
+    <select            id="fservice">
+      <option value="">Select Service</option>
       <option>Washroom Cleaning</option>
       <option>Home Deep Cleaning</option>
       <option>Kitchen Cleaning</option>
@@ -485,8 +481,9 @@
       <option>Water Tank Cleaning</option>
       <option>Office Cleaning</option>
     </select>
-    <button class="btn-book">Book Now →</button>
+    <button class="btn-book" id="submitBtn" onclick="submitBooking()">Book Now →</button>
   </div>
+  <p id="form-status"></p>
 </section>
 
 <!-- FOOTER -->
@@ -497,7 +494,7 @@
       <p class="footer-tagline">Your trusted partner for professional home &amp; office cleaning in Tirupati. Trained teams, professional machines.</p>
       <div class="footer-contact">
         <a href="tel:+918886122287">📞 +91 8886122287</a>
-        <a href="mailto:hello@sparkclean.in">✉️ hello@sparkclean.in</a>
+        <a href="mailto:myattitudekak@gmail.com">✉️ myattitudekak@gmail.com</a>
         <span>📍 Kadapa - Tirupati Rd, near PS4 Pure Veg Restaurant, Korlagunta, Tirupati, AP 517501</span>
       </div>
     </div>
@@ -517,27 +514,73 @@
   </div>
 </footer>
 
+<!-- WhatsApp Float -->
+<a href="https://wa.me/918886122287" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+  emailjs.init('YJrEikyZln4YlV7Un');
+
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-
   hamburger.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
-
   function closeMenu() {
     mobileMenu.classList.remove('open');
     hamburger.classList.remove('open');
     document.body.style.overflow = '';
   }
-
   document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-      closeMenu();
-    }
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
   });
+
+  async function submitBooking() {
+    const name    = document.getElementById('fname').value.trim();
+    const phone   = document.getElementById('fphone').value.trim();
+    const service = document.getElementById('fservice').value;
+    const status  = document.getElementById('form-status');
+    const btn     = document.getElementById('submitBtn');
+
+    if (!name || !phone || !service) {
+      status.style.color = '#C2185B';
+      status.textContent = '⚠️ Please fill all fields before booking.';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.style.color = '#888';
+    status.textContent = '⏳ Submitting your booking…';
+
+    try {
+      await emailjs.send('service_tyzdjnb', 'template_ncyvokp', {
+        customer_name: name,
+        customer_phone: phone,
+        service_type: service,
+        name: name,
+        email: 'myattitudekak@gmail.com',
+        message: 'Service: ' + service + ' | Phone: ' + phone
+      });
+
+      status.style.color = 'green';
+      status.textContent = '✅ Booking received! We will call you within 30 minutes.';
+      document.getElementById('fname').value = '';
+      document.getElementById('fphone').value = '';
+      document.getElementById('fservice').value = '';
+    } catch (err) {
+      status.style.color = '#C2185B';
+      const errMsg = err && err.text ? err.text : (err && err.status ? 'Status: ' + err.status : JSON.stringify(err));
+      status.textContent = '❌ Error: ' + errMsg;
+      console.error('EmailJS error:', err);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Book Now →';
+    }
+  }
 </script>
 </body>
 </html>

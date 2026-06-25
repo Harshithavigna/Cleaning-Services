@@ -24,7 +24,6 @@
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
-
   /* NAV */
   nav {
     position: relative; top: 0; z-index: 100;
@@ -44,7 +43,6 @@
     transition: background 0.2s, transform 0.15s;
   }
   .nav-cta:hover { background: var(--pink-hover); transform: translateY(-1px); }
-
   /* HAMBURGER */
   .hamburger {
     display: none; flex-direction: column; justify-content: center; align-items: center;
@@ -59,7 +57,6 @@
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
   /* MOBILE NAV ACTIONS */
   .nav-mobile-actions {
     display: none;
@@ -100,7 +97,6 @@
     font-weight: 300;
     line-height: 1;
   }
-
   /* MOBILE MENU */
   .mobile-menu {
     display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0;
@@ -129,7 +125,6 @@
     text-decoration: none; transition: all 0.2s; margin-top: 10px; background: #fff;
   }
   .mobile-call:hover { border-color: var(--pink); color: var(--pink); }
-
   /* HERO */
   .hero {
     padding: 90px 6% 80px; display: grid; grid-template-columns: 1fr 1fr;
@@ -173,13 +168,11 @@
   .card-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; color: var(--text); }
   .card-sub { font-size: 12px; color: var(--text-soft); }
   .rating { font-size: 11px; color: var(--pink); margin-top: 4px; }
-
   /* SECTIONS */
   section { padding: 80px 6%; }
   .section-label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--pink); margin-bottom: 10px; }
   .section-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 38px); line-height: 1.25; color: var(--text); margin-bottom: 14px; letter-spacing: -0.3px; }
   .section-sub { font-size: 15px; color: var(--text-mid); font-weight: 300; max-width: 520px; line-height: 1.75; }
-
   /* SERVICES */
   .services { background: var(--bg-alt); }
   .services-header { text-align: center; margin-bottom: 52px; }
@@ -199,7 +192,6 @@
   .service-name { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
   .service-desc { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
   .service-price { margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--pink); }
-
   /* WHY US */
   .why { background: #fff; }
   .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
@@ -214,7 +206,6 @@
   .why-stat-card:first-child { grid-column: 1 / -1; }
   .why-num { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--pink); }
   .why-label { font-size: 12px; color: var(--text-soft); margin-top: 4px; }
-
   /* HOW IT WORKS */
   .how { background: var(--bg-alt); text-align: center; }
   .how-header { margin-bottom: 56px; }
@@ -233,7 +224,6 @@
   }
   .step-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
   .step-desc { font-size: 13px; color: var(--text-soft); line-height: 1.65; }
-
   /* TESTIMONIALS */
   .testimonials { background: #fff; }
   .testimonials-header { margin-bottom: 44px; }
@@ -246,7 +236,6 @@
   .author-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--pink-light); color: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; }
   .author-name { font-size: 13px; font-weight: 600; color: var(--text); }
   .author-loc { font-size: 12px; color: var(--text-soft); }
-
   /* BOOKING */
   .booking { background: var(--pink-tint); border-top: 1px solid #f2d4df; border-bottom: 1px solid #f2d4df; text-align: center; padding: 80px 6%; }
   .booking .section-title { color: var(--text); }
@@ -267,7 +256,6 @@
   .btn-book:hover { background: var(--pink-hover); transform: translateY(-1px); }
   .btn-book:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
   #form-status { margin-top: 14px; font-size: 14px; font-weight: 500; min-height: 22px; }
-
   /* FOOTER */
   footer { background: #1a1a1a; color: rgba(255,255,255,0.45); padding: 56px 6% 28px; }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1.4fr; gap: 32px; margin-bottom: 44px; align-items: start; }
@@ -288,11 +276,9 @@
   .footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
   .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; }
   .footer-bottom p { font-size: 12px; }
-
   /* WHATSAPP FLOAT */
   .whatsapp-float { position: fixed; bottom: 26px; right: 26px; z-index: 999; width: 54px; height: 54px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.18); text-decoration: none; font-size: 26px; transition: transform 0.2s; }
   .whatsapp-float:hover { transform: scale(1.1); }
-
   /* RESPONSIVE */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
@@ -316,7 +302,6 @@
     .booking-form { flex-direction: column; }
     .booking-form input, .booking-form select, .btn-book { width: 100%; }
   }
-
   /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .hero-content > * { animation: fadeUp 0.55s ease both; }
@@ -328,14 +313,12 @@
 </style>
 </head>
 <body>
-
 <!-- NAV -->
 <nav>
   <a href="#" class="logo">
     <img src="Images/Logo.jpeg" alt="KAK Logo" />
     <div class="logo-brand"></div>
   </a>
-
   <!-- MOBILE ONLY: Call + WhatsApp -->
   <div class="nav-mobile-actions">
     <a href="tel:+918886122287" class="nav-icon-btn call-btn" aria-label="Call us">
@@ -348,7 +331,6 @@
       <span>WhatsApp</span>
     </a>
   </div>
-
   <ul class="nav-links">
     <li><a href="Services/services.html">Services</a></li>
     <li><a href="About/About.html">About</a></li>
@@ -360,7 +342,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <!-- MOBILE MENU DRAWER -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
@@ -372,7 +353,6 @@
   <a href="#booking" class="mobile-cta" onclick="closeMenu()">Book a Service</a>
   <a href="tel:+918886122287" class="mobile-call">📞 +91 88861 22287</a>
 </div>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
@@ -404,7 +384,6 @@
     </div>
   </div>
 </section>
-
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-header">
@@ -421,7 +400,6 @@
     <div class="service-card"><div class="service-icon">🏢</div><div class="service-name">Office &amp; Commercial</div><p class="service-desc">Daily housekeeping, periodic deep-cleaning contracts for offices, shops and apartments.</p><div class="service-price">Custom Pricing</div></div>
   </div>
 </section>
-
 <!-- WHY US -->
 <section class="why">
   <div class="why-grid">
@@ -442,7 +420,6 @@
     </div>
   </div>
 </section>
-
 <!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="how-header"><div class="section-label">How it Works</div><div class="section-title">Clean in 4 simple steps</div></div>
@@ -453,7 +430,6 @@
     <div class="step"><div class="step-num">4</div><div class="step-title">Sparkling Results</div><p class="step-desc">Inspect the work. We don't leave until you're fully satisfied.</p></div>
   </div>
 </section>
-
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="reviews">
   <div class="testimonials-header"><div class="section-label">Reviews</div><div class="section-title">What our customers say</div></div>
@@ -463,13 +439,11 @@
     <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Used them for our office weekly housekeeping. Consistent, reliable, and the staff is always polite. Our employees love the clean space."</p><div class="review-author"><div class="author-avatar">AM</div><div><div class="author-name">Ananya M.</div><div class="author-loc">Leela Mahal, Tirupati</div></div></div></div>
   </div>
 </section>
-
 <!-- BOOKING CTA -->
 <section class="booking" id="booking">
   <div class="section-label">Book a Service</div>
   <div class="section-title">Ready for a cleaner home?</div>
   <p class="section-sub">Fill in your details and we'll call you within 30 minutes to confirm your booking.</p>
-
   <div class="booking-form">
     <input type="text" id="fname"    placeholder="Your Name"    />
     <input type="tel"  id="fphone"   placeholder="Phone Number" />
@@ -486,7 +460,6 @@
   </div>
   <p id="form-status"></p>
 </section>
-
 <!-- FOOTER -->
 <footer id="contact">
   <div class="footer-grid">
@@ -514,17 +487,12 @@
     <p>Privacy Policy · Terms of Service</p>
   </div>
 </footer>
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/918886122287" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
-
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
   // ── EmailJS init — replace with your own IDs after signup ──────
   // Sign up free at https://emailjs.com → get Service ID, Template ID, Public Key
   emailjs.init('Za92nsnDHuNXNO8gU');
-
   // ── Hamburger menu ─────────────────────────────────────────────
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -541,7 +509,6 @@
   document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
   });
-
   // ── Booking form submit ────────────────────────────────────────
   async function submitBooking() {
     const name    = document.getElementById('fname').value.trim();
@@ -549,18 +516,15 @@
     const service = document.getElementById('fservice').value;
     const status  = document.getElementById('form-status');
     const btn     = document.getElementById('submitBtn');
-
     if (!name || !phone || !service) {
       status.style.color = '#C2185B';
       status.textContent = '⚠️ Please fill all fields before booking.';
       return;
     }
-
     btn.disabled = true;
     btn.textContent = 'Sending…';
     status.style.color = '#888';
     status.textContent = '⏳ Submitting your booking…';
-
     try {
       await emailjs.send('service_45xuo4z', 'template_r74wuj6', {
         customer_name: name,
@@ -570,7 +534,6 @@
         email: 'swinggg540@gmail.com',
         message: 'Service: ' + service + ' | Phone: ' + phone
       });
-
       status.style.color = 'green';
       status.textContent = '✅ Booking received! We will call you within 30 minutes.';
       document.getElementById('fname').value = '';

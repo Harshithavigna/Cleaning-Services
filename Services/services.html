@@ -9,24 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --pink:       #C2185B;
     --pink-hover: #AD1457;
     --pink-light: #FCE4EC;
     --pink-tint:  #FFF5F8;
     --pink-dark:  #880E4F;
-
     --text:       #1C1C1C;
     --text-mid:   #555555;
     --text-soft:  #999999;
-
     --bg:         #FFFFFF;
     --bg-alt:     #F7F7F7;
     --border:     #E8E8E8;
     --shadow:     rgba(0,0,0,0.06);
   }
-
   html { scroll-behavior: smooth; }
   body {
     font-family: 'DM Sans', sans-serif;
@@ -35,7 +31,6 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-
   /* ─── NAV ─── */
   nav {
     position: sticky; top: 0; z-index: 100;
@@ -69,7 +64,6 @@
     transition: background 0.2s, transform 0.15s;
   }
   .nav-cta:hover { background: var(--pink-hover); transform: translateY(-1px); }
-
   /* ─── PAGE HERO ─── */
   .page-hero {
     background: linear-gradient(135deg, #f2d4df 0%, #f2d4df 100%);
@@ -104,7 +98,6 @@
     font-size: 17px; color: rgba(176, 46, 46, 0.7);
     max-width: 520px; margin: 0 auto; line-height: 1.75; font-weight: 300;
   }
-
   /* ─── SHARED ─── */
   section { padding: 80px 6%; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
@@ -122,12 +115,10 @@
     font-size: 15px; color: var(--text-mid);
     font-weight: 300; max-width: 520px; line-height: 1.75;
   }
-
   /* ─── SERVICES GRID ─── */
   .services-section { background: var(--bg); }
   .services-header { text-align: center; margin-bottom: 56px; }
   .services-header .section-sub { margin: 0 auto; }
-
   .service-block {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 0; border: 1px solid var(--border);
@@ -138,14 +129,12 @@
   .service-block:hover { box-shadow: 0 12px 40px rgba(194,24,91,0.12); }
   .service-block.reverse { direction: rtl; }
   .service-block.reverse > * { direction: ltr; }
-
   /* ─── SERVICE VISUAL — photo version ─── */
   .service-visual {
     position: relative;
     min-height: 300px;
     overflow: hidden;
   }
-
   /* actual photo */
   .service-visual img {
     width: 100%; height: 100%;
@@ -154,7 +143,6 @@
     transition: transform 0.5s ease;
   }
   .service-block:hover .service-visual img { transform: scale(1.04); }
-
   /* gradient fade: left-to-right for normal cards, right-to-left for reversed */
   .service-visual::after {
     content: '';
@@ -165,14 +153,12 @@
   .service-block.reverse .service-visual::after {
     background: linear-gradient(to left, rgba(0,0,0,0.08) 0%, rgba(255,255,255,0.18) 100%);
   }
-
   .service-visual-tag {
     position: absolute; top: 16px; left: 16px; z-index: 2;
     background: rgba(255,255,255,0.92); backdrop-filter: blur(6px);
     color: var(--pink); font-size: 12px; font-weight: 600;
     padding: 5px 12px; border-radius: 4px; letter-spacing: 0.5px;
   }
-
   .service-info { padding: 44px 48px; display: flex; flex-direction: column; justify-content: center; }
   .service-tag {
     display: inline-block; background: var(--pink-light);
@@ -222,7 +208,6 @@
     box-shadow: 0 2px 12px rgba(194,24,91,0.20);
   }
   .btn-book:hover { background: var(--pink-hover); transform: translateY(-2px); }
-
   /* ─── QUICK CARDS ─── */
   .quick-section { background: var(--bg-alt); }
   .quick-header { text-align: center; margin-bottom: 48px; }
@@ -246,7 +231,6 @@
   .quick-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
   .quick-desc { font-size: 13px; color: var(--text-soft); line-height: 1.65; margin-bottom: 14px; }
   .quick-price { font-size: 13px; font-weight: 600; color: var(--pink); }
-
   /* ─── HOW IT WORKS ─── */
   .how { background: var(--bg); text-align: center; }
   .how-header { margin-bottom: 56px; }
@@ -277,7 +261,6 @@
   }
   .step-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
   .step-desc  { font-size: 13px; color: var(--text-soft); line-height: 1.65; }
-
   /* ─── CTA ─── */
   .cta-section {
     background: var(--pink-tint);
@@ -304,7 +287,6 @@
     transition: all 0.2s; background: #fff;
   }
   .btn-outline:hover { border-color: var(--pink); color: var(--pink); }
-
   /* ─── FOOTER ─── */
   footer {
     background: #1a1a1a; color: rgba(255,255,255,0.45);
@@ -341,7 +323,6 @@
     padding-top: 22px; display: flex; justify-content: space-between; align-items: center;
   }
   .footer-bottom p { font-size: 12px; }
-
   /* ─── WHATSAPP ─── */
   .whatsapp-float {
     position: fixed; bottom: 26px; right: 26px; z-index: 999;
@@ -352,7 +333,6 @@
     text-decoration: none; font-size: 26px; transition: transform 0.2s;
   }
   .whatsapp-float:hover { transform: scale(1.1); }
-
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
     .service-block, .service-block.reverse { grid-template-columns: 1fr; direction: ltr; }
@@ -371,7 +351,6 @@
     .service-price-row { flex-direction: column; align-items: flex-start; }
     .btn-book { margin-left: 0; }
   }
-
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -384,13 +363,11 @@
 </style>
 </head>
 <body>
-
 <!-- NAV -->
 <nav>
   <a href="../index.html" class="logo">
     <img src="../Images/Logo.jpeg" alt="KAK Logo" />
-    <div class="logo-brand">
-      
+    <div class="logo-brand">   
     </div>
   </a>
   <ul class="nav-links">
@@ -402,7 +379,6 @@
   </ul>
   <a href="tel:+918886122287" class="nav-cta">📞 Book Now</a>
 </nav>
-
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -415,7 +391,6 @@
     <p>From deep washroom scrubbing to full home restoration — every service is machine-powered, eco-safe, and backed by trained professionals.</p>
   </div>
 </div>
-
 <!-- MAIN SERVICES -->
 <section class="services-section">
   <div class="section-inner">
@@ -424,7 +399,6 @@
       <div class="section-title">All Our Services</div>
       <p class="section-sub">Each service is carried out by verified professionals using industrial-grade equipment and eco-friendly products.</p>
     </div>
-
     <!-- 1. Home Deep Cleaning -->
     <div class="service-block" id="home-cleaning">
       <div class="service-visual">
@@ -455,7 +429,6 @@
         </div>
       </div>
     </div>
-
     <!-- 2. Washroom Cleaning -->
     <div class="service-block reverse" id="washroom-cleaning">
       <div class="service-visual">
@@ -485,7 +458,6 @@
         </div>
       </div>
     </div>
-
     <!-- 3. Kitchen Cleaning -->
     <div class="service-block" id="kitchen-cleaning">
       <div class="service-visual">
@@ -515,7 +487,6 @@
         </div>
       </div>
     </div>
-
     <!-- 4. Sofa Cleaning -->
     <div class="service-block reverse" id="sofa-cleaning">
       <div class="service-visual">
@@ -545,7 +516,6 @@
         </div>
       </div>
     </div>
-
     <!-- 5. Water Tank Cleaning -->
     <div class="service-block" id="tank-cleaning">
       <div class="service-visual">
@@ -575,7 +545,6 @@
         </div>
       </div>
     </div>
-
     <!-- 6. Office Cleaning -->
     <div class="service-block reverse" id="office-cleaning">
       <div class="service-visual">
@@ -605,10 +574,8 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ADDITIONAL QUICK SERVICES -->
 <section class="quick-section">
   <div class="section-inner">
@@ -657,7 +624,6 @@
     </div>
   </div>
 </section>
-
 <!-- HOW IT WORKS -->
 <section class="how">
   <div class="section-inner">
@@ -689,7 +655,6 @@
     </div>
   </div>
 </section>
-
 <!-- CTA -->
 <section class="cta-section">
   <div class="section-label">Ready to Book?</div>
@@ -700,7 +665,6 @@
     <a href="../Contactus/Contactus.html" class="btn-outline">Send a Message</a>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -760,6 +724,5 @@
     <p>Privacy Policy · Terms of Service</p>
   </div>
 </footer>
-
 </body>
 </html>

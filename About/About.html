@@ -9,26 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --pink:       #C2185B;
     --pink-hover: #AD1457;
     --pink-light: #FCE4EC;
     --pink-tint:  #FFF5F8;
     --pink-dark:  #880E4F;
-
     --text:       #1C1C1C;
     --text-mid:   #555555;
     --text-soft:  #999999;
-
     --bg:         #FFFFFF;
     --bg-alt:     #F7F7F7;
     --border:     #E8E8E8;
     --shadow:     rgba(0,0,0,0.06);
   }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -36,7 +31,6 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-
   /* ─── NAV ─── */
   nav {
     position: sticky; top: 0; z-index: 100;
@@ -73,7 +67,6 @@
     transition: background 0.2s, transform 0.15s;
   }
   .nav-cta:hover { background: var(--pink-hover); transform: translateY(-1px); }
-
   /* ─── PAGE HERO ─── */
   .page-hero {
     background: linear-gradient(135deg, #f2d4df 0%, #f2d4df 100%);
@@ -113,7 +106,6 @@
     font-size: 17px; color: rgba(176, 46, 46, 0.7);
     max-width: 520px; margin: 0 auto; line-height: 1.75; font-weight: 300;
   }
-
   /* ─── SHARED ─── */
   section { padding: 80px 5%; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
@@ -131,7 +123,6 @@
     font-size: 16px; color: var(--text-mid);
     font-weight: 300; max-width: 520px; line-height: 1.7;
   }
-
   /* ─── STORY ─── */
   .story { background: var(--bg); }
   .story-grid {
@@ -187,7 +178,6 @@
     transition: all 0.2s; margin-left: 14px;
   }
   .btn-outline:hover { background: var(--pink-light); }
-
   /* ─── VALUES ─── */
   .values { background: var(--bg); }
   .values-header { text-align: center; margin-bottom: 56px; }
@@ -214,7 +204,6 @@
     font-size: 18px; font-weight: 500; color: var(--text); margin-bottom: 12px;
   }
   .value-desc { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
-
   /* ─── JOURNEY / TIMELINE ─── */
   .journey { background: var(--pink-dark); }
   .journey .section-label { color: var(--pink-light); }
@@ -251,7 +240,6 @@
   }
   .tl-title { font-size: 17px; font-weight: 500; color: #fff; margin-bottom: 8px; }
   .tl-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; font-weight: 300; }
-
   /* ─── WHY US ─── */
   .why { background: var(--bg); }
   .why-grid {
@@ -285,7 +273,6 @@
   .why-stat-card:first-child .why-num { color: var(--pink-light); }
   .why-lbl { font-size: 13px; color: var(--text-soft); margin-top: 4px; }
   .why-stat-card:first-child .why-lbl { color: rgba(255,255,255,0.55); }
-
   /* ─── CTA ─── */
   .cta-section {
     background: var(--pink-tint);
@@ -313,7 +300,6 @@
     transition: all 0.2s; background: #fff;
   }
   .btn-ghost:hover { border-color: var(--pink); color: var(--pink); }
-
   /* ─── FOOTER ─── */
   footer {
     background: #1a1a1a;
@@ -340,7 +326,6 @@
     display: flex; justify-content: space-between; align-items: center;
   }
   .footer-bottom p { font-size: 12px; }
-
   /* ─── WHATSAPP ─── */
   .whatsapp-float {
     position: fixed; bottom: 28px; right: 28px; z-index: 999;
@@ -351,7 +336,6 @@
     text-decoration: none; font-size: 26px; transition: transform 0.2s;
   }
   .whatsapp-float:hover { transform: scale(1.1); }
-
   /* ─── RESPONSIVE ─── */
   @media (max-width: 960px) {
     .story-grid, .why-grid { grid-template-columns: 1fr; }
@@ -366,7 +350,6 @@
     .why-visual { grid-template-columns: 1fr; }
     .why-stat-card:first-child { grid-column: auto; }
   }
-
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -379,13 +362,11 @@
 </style>
 </head>
 <body>
-
 <!-- NAV -->
 <nav>
   <a href="../index.html" class="logo">
     <img src="../Images/Logo.jpeg" alt="KAK Logo" />
-    <div class="logo-brand">
-      
+    <div class="logo-brand">     
     </div>
   </a>
   <ul class="nav-links">
@@ -396,7 +377,6 @@
   </ul>
   <a href="tel:+918886122287" class="nav-cta">📞 Book Now</a>
 </nav>
-
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -409,7 +389,6 @@
     <p>We started with one goal: make professional cleaning accessible to every family in Tirupati. Today, we're proud to be the city's most trusted name in home hygiene.</p>
   </div>
 </div>
-
 <!-- STORY -->
 <section class="story">
   <div class="section-inner">
@@ -435,7 +414,6 @@
     </div>
   </div>
 </section>
-
 <!-- VALUES -->
 <section class="values">
   <div class="section-inner">
@@ -478,7 +456,6 @@
     </div>
   </div>
 </section>
-
 <!-- JOURNEY / TIMELINE -->
 <section class="journey">
   <div class="section-inner">
@@ -523,7 +500,6 @@
     </div>
   </div>
 </section>
-
 <!-- WHY US -->
 <section class="why">
   <div class="section-inner">
@@ -580,7 +556,6 @@
     </div>
   </div>
 </section>
-
 <!-- CTA -->
 <div class="cta-section">
   <div class="section-label">Ready to Experience the Difference?</div>
@@ -591,7 +566,6 @@
     <a href="../Contactus/Contactus.html" class="btn-ghost">Book Online →</a>
   </div>
 </div>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -639,6 +613,5 @@
     <p>Privacy Policy · Terms of Service</p>
   </div>
 </footer>
-
 </body>
 </html>
